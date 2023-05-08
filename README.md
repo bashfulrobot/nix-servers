@@ -1,3 +1,3 @@
 # nix-servers
 
-- Super simple next OS configuration for a docker host  
+- Super simple nixOS configuration for a docker host  
