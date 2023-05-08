@@ -13,6 +13,7 @@
     fd
     cloud-utils
     gnumake
+    just
     exa
     ripgrep
     du-dust
