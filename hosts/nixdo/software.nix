@@ -21,6 +21,7 @@
     starship
     tree
     tailscale
+    gh
   ];
 
   # Install Docker
