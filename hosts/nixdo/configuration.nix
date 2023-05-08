@@ -5,18 +5,15 @@
 { config, pkgs, lib, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      ./disks.nix
-      ./network.nix
-      ./users.nix
-      ./software.nix
-      ./services.nix
-    ];
-
-
-
+  imports = [ # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+    ./disks.nix
+    ./network.nix
+    ./users.nix
+    ./software.nix
+    ./services.nix
+    ./firewall.nix
+  ];
 
   # Set your time zone.
   time.timeZone = "America/Vancouver";
@@ -30,9 +27,6 @@
   #  xkbVariant = "";
   #};
 
-
-
-
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
@@ -44,11 +38,6 @@
   # List services that you want to enable:
 
 
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
